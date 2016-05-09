@@ -1,4 +1,4 @@
-# Ionic Tabs Template
+# Ionic SideMenu Template
 
 An application using Apache Cordova, Ionic Framework, and Typescript. Currently supporting iOS, Android and Windows 10.
 
