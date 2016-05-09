@@ -7,10 +7,10 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers'])
 .run(function($ionicPlatform:ionic.platform.IonicPlatformService) {
-  $ionicPlatform.ready(function() {
+  $ionicPlatform.ready(() => {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-    if (cordova.platformId === 'ios' && window.cordova && window.cordova.plugins.Keyboard) {
+    if (window.cordova && window.cordova.plugins.Keyboard) {
       //cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       //cordova.plugins.Keyboard.disableScroll(true);
     }
@@ -27,7 +27,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
+    controller: 'AppCtrl as AppCtrl'
   })
 
   .state('app.search', {
@@ -52,7 +52,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent': {
           templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+          controller: 'PlaylistsCtrl as PlaylistsCtrl'
         }
       }
     })
